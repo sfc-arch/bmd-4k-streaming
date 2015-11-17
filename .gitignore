@@ -1,2 +1,4 @@
 rx/bin/
 !rx/bin/.keep
+tx/bin/
+!tx/bin/.keep
