@@ -1,0 +1,2 @@
+#!/bin/sh
+`dirname $0`/rx/bin/ReceiveTcpMulti 62311 |  aplay -t raw -r 48000 -c 2 -f S16_LE -

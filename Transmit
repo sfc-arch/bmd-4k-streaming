@@ -1,0 +1,2 @@
+#!/bin/sh
+`dirname $0`/tx/bin/StreamTcpMulti -d 0 -m 19
