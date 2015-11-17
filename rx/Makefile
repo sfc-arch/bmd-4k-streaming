@@ -1,2 +1,2 @@
 ReceiveTcpMulti: ReceiveTcpMulti
-	gcc -lstdc++ -o ReceiveTcpMulti ReceiveTcpMulti.cpp
+	gcc -lstdc++ -o bin/ReceiveTcpMulti ReceiveTcpMulti.cpp
