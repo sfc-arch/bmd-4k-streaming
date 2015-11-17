@@ -28,20 +28,21 @@
 
 CC=g++
 SDK_PATH=./include
+BIN_PATH=./bin
 CFLAGS=-Wno-multichar -I $(SDK_PATH) -fno-rtti
 LDFLAGS=-lm -ldl -lpthread
 
 Capture: Capture.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp
-	$(CC) -o bin/Capture Capture.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp $(CFLAGS) $(LDFLAGS)
+	$(CC) -o $(BIN_PATH)/Capture Capture.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp $(CFLAGS) $(LDFLAGS)
 
 Stream: Stream.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp
-	$(CC) -o bin/Stream Stream.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp $(CFLAGS) $(LDFLAGS)
+	$(CC) -o $(BIN_PATH)/Stream Stream.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp $(CFLAGS) $(LDFLAGS)
 
 StreamTcp: StreamTcp.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp
-	$(CC) -o bin/StreamTcp StreamTcp.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp $(CFLAGS) $(LDFLAGS)
+	$(CC) -o $(BIN_PATH)/StreamTcp StreamTcp.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp $(CFLAGS) $(LDFLAGS)
 
 StreamTcpMulti: StreamTcpMulti.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp
-	$(CC) -o bin/StreamTcpMulti StreamTcpMulti.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp $(CFLAGS) $(LDFLAGS)
+	$(CC) -o $(BIN_PATH)/StreamTcpMulti StreamTcpMulti.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp $(CFLAGS) $(LDFLAGS)
 
 clean:
 	rm -f Capture

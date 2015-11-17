@@ -1,2 +1,4 @@
+BIN_PATH=./bin
+
 ReceiveTcpMulti: ReceiveTcpMulti
-	gcc -lstdc++ -o bin/ReceiveTcpMulti ReceiveTcpMulti.cpp
+	gcc -lstdc++ -o $(BIN_PATH)/ReceiveTcpMulti ReceiveTcpMulti.cpp
