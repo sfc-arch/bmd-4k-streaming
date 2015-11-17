@@ -1,0 +1,2 @@
+#!/bin/sh
+./ReceiveTcpMulti 62310 | mplayer -demuxer rawvideo -rawvideo w=3840:h=2160:fps=29.97:format=uyvy - -loop 0 -vo gl -fs
