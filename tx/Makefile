@@ -24,7 +24,7 @@
 #** DEALINGS IN THE SOFTWARE.
 #** -LICENSE-END-
 
-.DEFAULT_GOAL := StreamTcpMulti
+.DEFAULT_GOAL := StreamTcpMultiServer
 
 CC=g++
 SDK_PATH=./include
@@ -43,6 +43,9 @@ StreamTcp: StreamTcp.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp
 
 StreamTcpMulti: StreamTcpMulti.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp
 	$(CC) -o $(BIN_PATH)/StreamTcpMulti StreamTcpMulti.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp $(CFLAGS) $(LDFLAGS)
+
+StreamTcpMultiServer: StreamTcpMultiServer.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp
+	$(CC) -o $(BIN_PATH)/StreamTcpMultiServer StreamTcpMultiServer.cpp Config.cpp $(SDK_PATH)/DeckLinkAPIDispatch.cpp $(CFLAGS) $(LDFLAGS)
 
 clean:
 	rm -f Capture

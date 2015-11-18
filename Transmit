@@ -1,2 +1,3 @@
 #!/bin/sh
-`dirname $0`/tx/bin/StreamTcpMulti -d 0 -m 19
+# `dirname $0`/tx/bin/StreamTcpMulti -d 0 -m 19 $@
+`dirname $0`/tx/bin/StreamTcpMultiServer -d 0 -m 19
